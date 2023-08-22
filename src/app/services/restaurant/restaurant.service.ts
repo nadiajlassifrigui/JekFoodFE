@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Restaurant } from 'src/app/shared/models/Restaurant';
 
@@ -6,9 +7,10 @@ import { Restaurant } from 'src/app/shared/models/Restaurant';
 })
 export class RestaurantService {
 
-  constructor() { }
-  getAll():Restaurant[]{
-    return[
+  constructor(private http: HttpClient) { }
+  getAll(){
+    return this.http.get<Restaurant[]>('http://localhost:8080/restaurant');
+  /*  return[
      {
       id:1,
       name:"TONTON",
@@ -43,6 +45,6 @@ export class RestaurantService {
      
      
 
-    ]
+    ]*/
   }
 }

@@ -9,7 +9,7 @@ import { HomeComponent } from './home/home.component';
 import { MenuComponent } from './menu/menu.component';
 import { CounterComponent } from './counter/counter.component';
 import { ChefsComponent } from './chefs/chefs.component';
-
+import { HttpClientModule } from '@angular/common/http';
 import { GalleryComponent } from './gallery/gallery.component';
 import { ContactComponent } from './contact/contact.component';
 import { OrderComponent } from './order/order.component';
@@ -36,7 +36,8 @@ import { BarRatingModule } from "ngx-bar-rating";
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BarRatingModule
+    BarRatingModule,
+    HttpClientModule
    
   ],
   providers: [],
